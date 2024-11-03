@@ -15,8 +15,8 @@ fetch(apiEndpoint)
     // Task 4 will handle error display
     console.error("Fetch error:", error); // Log error to console
     });
-    
-    // Task 3: Display Product Details Dynamically
+
+    // Task 3 - Display Product Details Dynamically
 function displayProducts(products) {
     productsContainer.innerHTML = ''; // Clear container
     // Loop through product and add it to page
@@ -47,3 +47,12 @@ function displayProducts(products) {
       // Append product div to container
       productsContainer.appendChild(productDiv);
     })};
+    // Task 4 - Handle Errors Gracefully 
+function displayErrorMessage(message) {
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = message;
+    errorMessage.style.color = 'red';
+    errorMessage.style.textAlign = 'center';
+    productsContainer.innerHTML = ''; // Clear  previous content
+    productsContainer.appendChild(errorMessage)}; // Display error message
+  
